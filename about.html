@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | RMGgames</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="https://pbs.twimg.com/media/EYyXtTRXQAA_GcA.jpg">
+    <script src="https://kit.fontawesome.com/e3ae993544.js" crossorigin="anonymous"></script>
+
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.1.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.1.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.1.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.1.2/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.1.2/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.1.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.1.2/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.1.2/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.1.2/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.1.2/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+
+  </head>
+    <!--INCLUIR ESTE HEADER EN TODAS LAS PÁGINAS-->
+    <header>
+        <div class="menu">
+            <a href="http://rmggames.web.app" class="main">RMGgames</a>
+            <ul>
+                <li><a href="descargas.html" target="_blank">Descargas</a></li>
+                <li><a href="mailto:info.rmggames@gmail.com" target="_blank">Contacto</a></li>
+                <li><a href="noticias.html" target="_blank">Noticias</a></li>
+                <li><a href="media.html" target="_blank">Media</a></li>
+                <li><a href="about.html" target="_blank">About Us</a></li>
+            </ul>
+        </div>
+        <div class="so">
+            <ul>
+                <li><a href="http://www.twitter.com/rmggames_"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="http://www.instagram.com/rmggames_"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/RMGgames-105556547855456/?modal=admin_todo_tour"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCFWoCOUL0yWfiU3xH_lm0hQ"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="http://www.twitch.tv/rmggames_?sr=a"><i class="fab fa-twitch"></i></a></li>
+                <li><a href="discord.html"><i class="fab fa-discord"></i></a></li>
+            </ul>
+        </div>
+    </header>
+  <body>
+     
+      <style type="text/css">
+          header
+{
+    margin: 2em;
+}
+.main 
+{ 
+    text-align: left;
+    font-family: 'Orbitron', sans-serif;
+    text-align: left;
+    margin: 12px;
+    color: #353535;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.main:hover
+{
+    color: cyan;
+    font-size: 25px;
+    transition: 0.2s;
+}
+.menu ul
+{
+    list-style: none;
+    text-align: right;
+    top 0;
+}
+.menu ul li
+{
+    display: inline;
+    transition: 0.2s;
+}
+.menu ul a
+{
+    text-decoration: none;
+    color: #353535;
+    font-weight: 500;
+    font-family: 'Orbitron', sans-serif;
+}
+.menu a:hover
+{
+    color: cyan;
+}
+.menu li:hover
+{
+    font-size: 25px;
+}
+.so ul
+{
+   list-style: none;
+   text-align: right;
+}
+.so ul li
+{
+    display: inline;
+    margin: 12px;
+}
+.so ul a
+{
+    text-decoration: none;
+    color: grey;
+    font-size: 20px;
+    transition: 0.2s;
+}
+.so a:hover
+{
+    transition: 0.2s;
+    color: cyan;
+    font-size: 25px;
+}
+body
+{
+    background: #FFF;
+    font-family: 'Montserrat', sans-serif;
+}
+.bg
+{
+    background: #ABCCED;
+    color: #353535;
+    justify-content: center;
+    margin: 50px;
+    padding: 12px;
+}
+.bg a
+{
+    color: #353535;
+}
+.button
+{
+    background: #1010FF;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    padding: 12px;
+    text-align: center;
+    transition: 0.2s;
+}
+.button a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+.button:hover
+{
+    background: #353535;
+    transition: 0.2s;
+}
+.init
+{
+    text-align: center;
+}
+.footer
+{
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+.footer ul
+{
+    list-style: none;
+    text-align: right;
+}
+.footer ul li
+{
+    display: inline;
+    margin: 18px; 
+}
+.footer ul a
+{
+    color: #353535;
+    text-decoration: none;
+    font-size: 15px;
+}
+.copyright
+{
+    text-align: center;
+    color: #353535;
+    font-size: 18px;
+}
+          
+      </style>
+       <!--Desde aquí-->
+      <div class="bg">
+          <h1 class="init">About Us!</h1>  
+          <p>
+              En RMGgames creamos videojuegos para Windows, Mac, Linux… Visita nuestras RRSS para saber más de nosotros, estamos actualmente desarrollando el videojuego A.R.M.Y. el cual podrás jugar dentro de muy poco
+          </p>
+          <button class="button"><a href="eula.html">EULA</a></button>
+          <button class="button"><a href="https://www.youtube.com/channel/UCFWoCOUL0yWfiU3xH_lm0hQ">YouTube</a></button>
+          <button class="button"><a href="http://www.twitter.com/rmggames_">Twitter</a></button>
+          <button class="button"><a href="http://www.instagram.com/rmggames_">Instagram</a></button>
+          <button class="button"><a href="https://www.facebook.com/RMGgames-105556547855456/?modal=admin_todo_tour">Facebook</a></button>
+          <button class="button"><a href="http://www.twitch.tv/rmggames_?sr=a">Twitch</a></button>
+          <button class="button"><a href="discord.html">Discord</a></button>
+          
+
+
+
+
+      </div>
+      <div class="footer">
+          <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">EULA</a></li>
+              <li><a href="#">Política de privacidad</a></li>
+          </ul>
+          <p class="copyright">
+              Copyright RMGgames MMXX. Todos los derechos reservados
+          </p>
+      </div>
+      <!--Hasta aquí-->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
