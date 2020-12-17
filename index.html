@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="https://pbs.twimg.com/media/EYyXtTRXQAA_GcA.jpg">
+    <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/e3ae993544.js" crossorigin="anonymous"></script>
 
 
@@ -24,7 +25,7 @@
     <script defer src="/__/firebase/8.1.2/firebase-analytics.js"></script>
     <script defer src="/__/firebase/8.1.2/firebase-remote-config.js"></script>
     <script defer src="/__/firebase/8.1.2/firebase-performance.js"></script>
-    <!-- 
+    <!--
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
@@ -56,14 +57,14 @@
         </div>
     </header>
   <body>
-     
+
       <style type="text/css">
 header
 {
     margin: 2em;
 }
-.main 
-{ 
+.main
+{
     text-align: left;
     font-family: 'Orbitron', sans-serif;
     text-align: left;
@@ -137,6 +138,7 @@ body
     background: #ABCCED;
     color: #353535;
     justify-content: center;
+    text-align: center;
     margin: 50px;
     padding: 12px;
 }
@@ -159,7 +161,7 @@ body
     color: white;
     text-decoration: none;
     font-size: 20px;
-    
+
 }
 .button:hover
 {
@@ -184,7 +186,7 @@ body
 .footer ul li
 {
     display: inline;
-    margin: 18px; 
+    margin: 18px;
 }
 .footer ul a
 {
@@ -198,45 +200,27 @@ body
     color: #353535;
     font-size: 18px;
 }
-          
+.input
+{
+  border: none;
+  border-radius: 20px;
+}
       </style>
        <!--Desde aquí-->
       <div class="bg">
-          <h1 class="init">Bienvenido a RMGgames</h1>
-          <p>La página oficial donde podrás descargar todos los videojuegos que creemos, además de conocer las últimas noticias sobre nosotros
+          <h1 class="init">Ups, esta página es solo para usuarios registrados</h1>
+          <a href="registro.html" style="color: #353535; text-decoration: none;">Registrarse</a>
+          <h1>Email</h1>
           <br>
+          <input type="email" class="input" id="email" placeholder="nombre@dominio.com" required>
+          <br><br>
+          <h1>Contraseña</h1>
           <br>
-              Para descargar los juegos tienes que <a href="#">registrarte</a> y si quieres saber más puedes suscribirte o mirar nuestras <a href="#">políticas</a>
-          <br>
-          <br>
-              <button class="button"><a href="#">Registrarse</a></button>
-          <br>
-          <br>
-              ¿Quieres descargar nuestros juegos?, no lo dudes más y accede ahora a Descargas
-              <br><br>
-              <button class="button"><a href="#">Bounced!</a></button>
-              <button class="button"><a href="#">Art</a></button>
-              <br>
-              <br><br>
-             ¿Prefieres conocer las últimas noticias?, entonces haz click aquí:
-              <br><br>
-             <button class="button"><a href="#">News</a></button>
-              <br><br>
-              <br>
-             Mira ya nuestras imágenes y vídeos
-              <br><br>
-             <button class="button"><a href="#">Media</a></button>
-              <br><br><br><br>
-            ¿Deseas contactar con nosotros?
-              <br><br>
-            <button class="button"><a href="#">Formulario de Contacto</a></button>
-              <br><br><br>
-           ¿Quieres saber más sobre nosotros?
-              <br><br>
-            <button class="button"><a href="#">About Us</a></button>
-          </p>
-          
+          <input type="password" class="input" id="password" placeholder="Contraseña" required>
+          <br><br>
+          <button type="submit" class="button" id="buton" onclick="send()">Acceder</button>
       </div>
+
       <div class="footer">
           <ul>
               <li><a href="#">About Us</a></li>
@@ -270,13 +254,13 @@ body
         try {
           let app = firebase.app();
           let features = [
-            'auth', 
-            'database', 
+            'auth',
+            'database',
             'firestore',
             'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
+            'messaging',
+            'storage',
+            'analytics',
             'remoteConfig',
             'performance',
           ].filter(feature => typeof app[feature] === 'function');
