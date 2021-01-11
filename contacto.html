@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Descargas | RMGgames</title>
+    <title>Contacto | RMGgames</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
@@ -31,17 +31,21 @@
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
 
-  </head>
-    <!--INCLUIR ESTE HEADER EN TODAS LAS PÁGINAS-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+        <script src="https://gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+        <script src="form.js"></script>
+            <title>Contacto</title>
+    </head>
     <header>
         <div class="menu">
             <a href="http://rmggames.web.app" class="main">RMGgames</a>
             <ul>
-                <li><a href="descargas.html">Descargas</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="media.html">Media</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="descargas.html" target="_blank">Descargas</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="noticias.html" target="_blank">Noticias</a></li>
+                <li><a href="media.html" target="_blank">Media</a></li>
+                <li><a href="about.html" target="_blank">About Us</a></li>
             </ul>
         </div>
         <div class="so">
@@ -51,13 +55,12 @@
                 <li><a href="https://www.facebook.com/RMGgames-105556547855456/?modal=admin_todo_tour"><i class="fab fa-facebook"></i></a></li>
                 <li><a href="https://www.youtube.com/channel/UCFWoCOUL0yWfiU3xH_lm0hQ"><i class="fab fa-youtube"></i></a></li>
                 <li><a href="http://www.twitch.tv/rmggames_?sr=a"><i class="fab fa-twitch"></i></a></li>
-                <li><a href="discord.html"><i class="fab fa-discord"></i></a></li>
+                <li><a href="https://discord.gg/4347jFb"><i class="fab fa-discord"></i></a></li>
             </ul>
         </div>
     </header>
-  <body>
-     
-      <style type="text/css">
+    <body>
+    <style type="text/css">
           header
 {
     margin: 2em;
@@ -198,61 +201,101 @@ body
     color: #353535;
     font-size: 18px;
 }
-.form
-{
-    text-align: center;    
-}
-.name
+.input
 {
     border: none;
-    border-radius: 7px;
-    padding: 5px;
-    font-size: 15px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 12px;
 }
-.apellido
+.form ul
 {
-    border: none;
-    border-radius: 7px;
-    padding: 5px;
-    font-size: 15px;
+    list-style: none;
+    text-align: center;
 }
-.email
+.send
 {
-    border: none;
-    border-radius: 7px;
-    padding: 5px;
+    transition: 0.2s;
+    border: none; 
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    background: -webkit-linear-gradient(left, aqua, #39ff39);
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 36px;
+    border-radius: 30px;
+    color: #fff;
     font-size: 15px;
+    cursor: pointer;
 }
-.message
+.bts ul
 {
-    border: none;
-    border-radius: 7px;
-    padding: 5px;
-    font-size: 15px;
-    min-width: 2em;
-    min-height: 6em;
+    text-align: center;
 }
-          
-      </style>
-       <!--Desde aquí-->
-      <div class="bg">
-          <h1 class="init">Contacto</h1>  
-          <div class="form">
-       <form>
-           <h2>Nombre</h2>
-           <input class="name" type="text" placeholder="Nombre">
-           <h2>Apellidos</h2>
-           <input class="apellido" type="text" placeholder="Apellidos">
-           <h2>Email</h2>
-           <input class="email" type="email" placeholder="name@domain.com"> 
-           <h2>Mensaje</h2>
-           <input class="message" type="text" placeholder="mensaje">
-           <br><br>
-           <button type="submit" class="button"><a>Enviar</a></button>
-       </form>
-          </div>
-      </div>
-      <div class="footer">
+.bts li
+{
+    display: inline;
+    margin: 12px;
+}
+.send:hover
+{
+    background: #353535;    
+    transition: 0.2s;
+    transform: rotateZ(-5deg);
+}
+.forgot
+{
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+}
+        .box
+        {
+            text-align: center;
+        }
+</style>
+        
+        <div class="bg">
+            <h1 class="init">Contacto</h1>
+            <div class="form">
+                <form action="https://formspree.io/f/xbjpzweb" method="POST">
+                    <div class="input">
+                        <label for="firstName">Nombre</label>
+                        <br><br>
+                        <input type="text" class="input" id="firstName" name="firstName" placeholder="Nombre" required>
+                    </div>
+                    <div class="input">
+                        <label for="lastName">Apellidos</label>
+                        <br><br>
+                        <input type="text" class="input" id="lastName" name="lastName" placeholder="Apellidos" required>
+                    </div>
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <br><br>
+                        <input type="formemail" class="input" name="formemail" placeholder="Email" required>
+                    </div>
+                    <div class="input">
+                        <label for="message">Mensaje</label>
+                        <br><br>
+                        <textarea cols="30" rows="10" type="email" class="input" name="message" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <input type="checkbox" class="box" required style="margin-left: 50%;" >
+                    <br>
+                    <p class="box">He leído y acepto la política de privacidad</p>
+                    <div class="bts">
+                <ul>
+                    <li><button type="submit" class="send">Enviar</button></li>
+                </ul>
+                </div>
+                </form>
+            </div>
+        </div>
+                <div class="footer">
           <ul>
               <li><a href="#">About Us</a></li>
               <li><a href="#">Contacto</a></li>
@@ -263,8 +306,7 @@ body
               Copyright RMGgames MMXX. Todos los derechos reservados
           </p>
       </div>
-      <!--Hasta aquí-->
-    <script>
+        <script>
       document.addEventListener('DOMContentLoaded', function() {
         const loadEl = document.querySelector('#load');
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
@@ -302,5 +344,5 @@ body
         }
       });
     </script>
-  </body>
+    </body>
 </html>

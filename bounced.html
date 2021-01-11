@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE HTML>
+<html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RMGgames</title>
+    <title>Bounced! | RMGgames</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
@@ -30,14 +30,12 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-
+    <script src="https://gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+    <script src="https://gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+    <script src="login.js"></script>
 </head>
-<!--INCLUIR ESTE HEADER EN TODAS LAS PÁGINAS-->
 <header>
     <div class="menu">
-        <a href="login.html" class="log">LogIn</a>
-
         <a href="http://rmggames.web.app" class="main">RMGgames</a>
         <ul>
             <li><a href="descargas.html" target="_blank">Descargas</a></li>
@@ -60,19 +58,9 @@
 </header>
 
 <body>
-
     <style type="text/css">
         header {
             margin: 2em;
-        }
-
-        .log {
-            float: right;
-            color: #FFF;
-            text-decoration: none;
-            background: #353535;
-            border-radius: 10px;
-            padding: 5px;
         }
 
         .main {
@@ -158,22 +146,13 @@
         }
 
         .button {
-            transition: 0.2s;
+            background: #1010FF;
+            border-radius: 7px;
+            outline: none;
             border: none;
-            margin-top: 40px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            font-weight: 600;
-            font-family: 'Montserrat', sans-serif;
-            background: -webkit-linear-gradient(left, aqua, #39ff39);
-            display: block;
-            margin: 0 auto;
-            width: 260px;
-            height: 45px;
-            border-radius: 30px;
-            color: #fff;
-            font-size: 15px;
-            cursor: pointer;
+            padding: 12px;
+            text-align: center;
+            transition: 0.2s;
         }
 
         .button a {
@@ -186,7 +165,6 @@
         .button:hover {
             background: #353535;
             transition: 0.2s;
-            transform: rotateZ(-5deg);
         }
 
         .init {
@@ -221,47 +199,93 @@
             font-size: 18px;
         }
 
+        .input {
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            padding: 12px;
+        }
+
+        .form ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .send {
+            transition: 0.2s;
+            border: none;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            background: -webkit-linear-gradient(left, aqua, #39ff39);
+            display: block;
+            margin: 0 auto;
+            width: 260px;
+            height: 36px;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .bts ul {
+            text-align: center;
+        }
+
+        .bts li {
+            display: inline;
+            margin: 12px;
+        }
+
+        .send:hover {
+            background: #353535;
+            transition: 0.2s;
+            transform: rotateZ(-5deg);
+        }
+
+        .forgot {
+            text-align: center;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
     </style>
-    <!--Desde aquí-->
+
     <div class="bg">
-        <h1 class="init">Bienvenido a RMGgames</h1>
-        <p>La página oficial donde podrás descargar todos los videojuegos que creemos, además de conocer las últimas noticias sobre nosotros
+        <h1 class="init">¡Área para usuarios!</h1>
+        <div class="form">
+            <form id="form">
+                <ul>
+                    <h2>Correo electrónico</h2>
+                    <li><input type="email" placeholder="Email" id="email" class="input">
+                    </li>
+                    <br><br>
+                    <h2>Contraseña</h2>
+                    <li><input type="password" placeholder="6 digitos mínimo" id="password" class="input">
+
+                    </li>
+                    <br><br>
+                </ul>
+            </form>
+        </div>
+        <div class="forgot">
+            <a href="forgot-password.html">¿Olvidaste tu contraseña?</a>
             <br>
-            <br>
-            Para descargar los juegos tienes que <a href="registro.html">registrarte</a> y si quieres saber más puedes mirar nuestras <a href="#policy">políticas</a>
-            <br>
-            <br>
-            <button class="button"><a href="registro.html">Registrarse</a></button>
-            <br>
-            <br>
-            ¿Quieres descargar nuestros juegos?, no lo dudes más y accede ahora a Descargas
+            <br>    
+            <a href="registro.html">¿No tienes cuenta?</a>
             <br><br>
-            <button class="button"><a href="bounced.html">Bounced!</a></button>
-            <br>
-            <button class="button"><a href="#">Art</a></button>
-            <br>
-            <br><br>
-            ¿Prefieres conocer las últimas noticias?, entonces haz click aquí:
-            <br><br>
-            <button class="button"><a href="noticias.html">News</a></button>
-            <br><br>
-            <br>
-            Mira ya nuestras imágenes y vídeos
-            <br><br>
-            <button class="button"><a href="media.html">Media</a></button>
-            <br><br><br><br>
-            ¿Deseas contactar con nosotros?
-            <br><br>
-            <button class="button"><a href="contacto.html">Contacto</a></button>
-            <br><br><br>
-            ¿Quieres saber más sobre nosotros?
-            <br><br>
-            <button class="button"><a href="about.html">About Us</a></button>
-        </p>
+        </div>
+        <div class="bts">
+            <ul>
+                <li><button onclick="signIn()" id="signIn" type="submit" class="send">Sign In</button></li>
+            </ul>
+        </div>
 
     </div>
     <div class="footer">
-        <ul id="policy">
+        <ul>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contacto</a></li>
             <li><a href="#">EULA</a></li>
@@ -271,7 +295,6 @@
             Copyright RMGgames MMXX. Todos los derechos reservados
         </p>
     </div>
-    <!--Hasta aquí-->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const loadEl = document.querySelector('#load');
