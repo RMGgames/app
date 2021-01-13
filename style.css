@@ -1,0 +1,108 @@
+*
+{
+    font-family: 'Montserrat', sans-serif;
+}
+body
+{
+    background: #353535;
+}
+.form-box
+{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+.social button
+{
+    border: none;
+    height: 50px;
+    width: 50px;
+    background: none;
+}
+.social i
+{
+    color: #353535;
+    transform: scale(2.0);
+    transition: 0.2s;
+}
+.social i:hover
+{
+    font-size: 18px;
+    transition: 0.2s;
+    color: #00ffff;
+}
+.button-box
+{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggle-btn
+{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+body span
+{
+    font-size: 10px;
+}
+#btn
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.input-group
+{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.2s;
+}
+.input-field
+{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px auto;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    background: transparent;
+}
+.submit-btn
+{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+#login
+{
+    left: 50px;
+}
+#register
+{
+    left: 450px;
+}
