@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Login | RMGgames</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e3ae993544.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+           <div class="form-box">
+               <div class="button-box">
+                   <div id="btn"></div>
+                   <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                   <button type="button" class="toggle-btn" onclick="register()">Register</button>
+               </div>
+               <div class="social">
+                <button><i class="fab fa-google"></i></button>
+                <button><i class="fab fa-facebook"></i></button>
+                <button><i class="fab fa-twitter"></i></button>
+                <button><i class="fab fa-github"></i></button>
+               </div>
+               <form id="login" class="input-group">
+                   <input type="text" class="input-field" placeholder="Email" required>
+                   <input type="password" class="input-field" placeholder="Password" required>
+                   <br><br><br>
+                   <button type="submit" class="submit-btn">Log In</button>
+               </form>
+               <form id="register" class="input-group">
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <br>
+                <input type="checkbox" required><span>He leído y acepto la política de privacidad</span>
+                <br><br><br>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+         </div>
+         <script>
+             var x = document.getElementById("login");
+             var y = document.getElementById("register");
+             var z = document.getElementById("btn");
+
+             function register()
+             {
+                 x.style.left = "-400px";
+                 y.style.left = "50px";
+                 z.style.left = "110px";
+             }
+             function login()
+             {
+                 x.style.left = "50px";
+                 y.style.left = "450px";
+                 z.style.left = "0px";
+             }
+         </script>
+    </body>
+</html>
